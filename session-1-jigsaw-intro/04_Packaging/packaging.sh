@@ -12,7 +12,7 @@ echo ""
 echo "${info} *** Creating module org.astro as a package file (jar) *** ${normal}"
 jar --create \
     --file mlib/org.astro@1.0.jar \
-	--module-version 1.0 \
+	-m-version 1.0 \
 	-C mods/org.astro .
 
 echo ""
@@ -41,7 +41,7 @@ jar --verbose \
 echo ""
 echo "${info} *** Printing module description for com.greetings as recorded in the module-info.class file in the package (jar) *** ${normal}"
 jar --verbose \
-    --describe-module \
+    --print-module-descriptor \
     --file=mlib/com.greetings.jar
 
     echo ""
