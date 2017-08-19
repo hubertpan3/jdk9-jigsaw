@@ -4,7 +4,8 @@ set -eu
 
 source ../../common-functions.sh
 
-JAVA_HOME=/usr/lib/jvm/java-9-openjdk-amd64/
+#you may need to manually insert your jvm
+#JAVA_HOME=/usr/lib/jvm/java-9-openjdk-amd64/
 
 echo ""
 echo "${info} *** Removing any existing executable directories *** ${normal}"
