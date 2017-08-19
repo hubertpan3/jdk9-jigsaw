@@ -21,7 +21,7 @@ javac --patch-module java.base=src \
 echo ""
 echo "${info} *** Compiling Main class*** ${normal}"
 
-javac -modulepath mods \
+javac --modulepath mods \
       -d mods/com.greetings/ \
       src/com.greetings/module-info.java \
       src/com.greetings/com/greetings/Main.java

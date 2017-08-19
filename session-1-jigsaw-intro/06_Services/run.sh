@@ -7,7 +7,7 @@ source ../../common-functions.sh
 echo ""
 echo "${info} *** Running 'com.greetings.Main' from within the mods folder (depends on 'com.socket' from within the mods folder) *** ${normal}"
 echo ""
-java -modulepath mods \
+java --modulepath mods \
      -m com.greetings/com.greetings.Main
 echo ""
 echo "${info} *** 'com.greetings.Main' imports and creates 'com.socket.NetworkSocket' *** ${normal}"

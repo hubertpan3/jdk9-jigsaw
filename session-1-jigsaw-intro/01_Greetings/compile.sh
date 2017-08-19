@@ -15,13 +15,13 @@ echo "${info} *** Compiling modules in '$COM_GREETINGS_FOLDER' *** ${normal}"
 
 # *******************************************************************************************************************************
 #
-# The -modulepath parameter of javac takes the name of module folder (in this case 'mode') where the compiled modules will be outputted.
+# The --modulepath parameter of javac takes the name of module folder (in this case 'mode') where the compiled modules will be outputted.
 # The -d parameter (does not have a long-form) is the location of the module directory where the compiled module(s) will be placed.
 #
 # The compiler creates the 'mods' folder, if it does not exist already and places compiled modules into them.
 
 mkdir -p mods
-javac -modulepath mods \
+javac --modulepath mods \
       -d $COM_GREETINGS_FOLDER \
       src/com.greetings/module-info.java \
       src/com.greetings/com/greetings/Main.java
