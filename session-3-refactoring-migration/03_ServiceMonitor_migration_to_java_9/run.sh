@@ -19,8 +19,8 @@ echo ""
 java9 \
 	--class-path 'build/class-path/*' \
 	--modulepath build/module-path \
-	--add-modules monitor.observer.alpha,monitor.observer.beta \
-	--add-modules monitor.utils,monitor.statistics \
-	--add-modules monitor.rest \
-	--add-modules java.xml.bind \
+	--addmods monitor.observer.alpha,monitor.observer.beta \
+	--addmods monitor.utils,monitor.statistics \
+	--addmods monitor.rest \
+	--addmods java.xml.bind \
 	monitor.Main

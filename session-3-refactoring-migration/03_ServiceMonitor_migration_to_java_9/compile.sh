@@ -89,7 +89,7 @@ echo " > creating monitor.persistence"
 javac9 \
 	--class-path 'build/class-path/*' \
 	--modulepath build/module-path \
-	--add-modules monitor.statistics \
+	--addmods monitor.statistics \
 	-d build/classes/monitor.persistence \
 	$(find monitor.persistence/src/main/java -name '*.java')
 jar9 --create \
@@ -118,9 +118,9 @@ echo " > creating monitor"
 javac9 \
 	--class-path 'build/class-path/*' \
 	--modulepath build/module-path \
-	--add-modules monitor.observer.alpha,monitor.observer.beta \
-	--add-modules monitor.utils,monitor.statistics \
-	--add-modules monitor.rest \
+	--addmods monitor.observer.alpha,monitor.observer.beta \
+	--addmods monitor.utils,monitor.statistics \
+	--addmods monitor.rest \
 	-d build/classes/monitor \
 	$(find monitor/src/main/java -name '*.java')
 jar9 --create \
