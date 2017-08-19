@@ -9,7 +9,7 @@ DESTINATION_FOLDER="mods"
 echo ""
 echo "${info} *** Compiling modules in $DESTINATION_FOLDER *** ${normal}"
 javac -d $DESTINATION_FOLDER \
-      -m-source-path src \
+      -modulesourcepath src \
       $(find src -name "*.java")
 
 echo ""

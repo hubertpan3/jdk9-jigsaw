@@ -17,7 +17,7 @@ javac -d $DESTINATION_FOLDER \
 
 # *************************************************************************************
 #
-# The -m-source-path parameter of javac takes input source files for multiple modules.
+# The -modulesourcepath parameter of javac takes input source files for multiple modules.
 # In the above both the modules 'org.astro' and 'com.greetings' are compiled at the same time, dependency is fulfilled immediately.
 #
 # *************************************************************************************

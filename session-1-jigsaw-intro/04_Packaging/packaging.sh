@@ -12,7 +12,7 @@ echo ""
 echo "${info} *** Creating module org.astro as a package file (jar) *** ${normal}"
 jar --create \
     --file mlib/org.astro@1.0.jar \
-	-m-version 1.0 \
+	--module-version 1.0 \
 	-C mods/org.astro .
 
 echo ""
@@ -29,7 +29,7 @@ runTree mlib
 echo ""
 echo "${info} *** Printing module description for org.astro as recorded in the module-info.class file in the package (jar) *** ${normal}"
 jar --verbose \
-    --describe-module \
+    --print-module-descriptor \
     --file=mlib/org.astro@1.0.jar
 
     echo ""
