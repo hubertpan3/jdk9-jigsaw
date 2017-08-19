@@ -13,7 +13,7 @@ runTree src
 echo ""
 echo "${info} *** Compiling both modules into the '$DESTINATION_FOLDER' folder *** ${normal}"
 javac -d $DESTINATION_FOLDER \
-      -m-source-path src $(find . -name "*.java")
+      -modulesourcepath src $(find . -name "*.java")
 
 # *************************************************************************************
 #
