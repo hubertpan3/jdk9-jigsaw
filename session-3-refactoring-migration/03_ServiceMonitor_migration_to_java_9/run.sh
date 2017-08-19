@@ -18,7 +18,7 @@ echo ""
 # the classpath is needed for Spark's dependencies
 java9 \
 	--class-path 'build/class-path/*' \
-	--modulepath build/module-path \
+	-modulepath build/module-path \
 	--addmods monitor.observer.alpha,monitor.observer.beta \
 	--addmods monitor.utils,monitor.statistics \
 	--addmods monitor.rest \

@@ -28,7 +28,7 @@ cp deps/* build/class-path
 echo " > creating monitor.utils"
 javac9 \
 	--class-path 'build/class-path/*' \
-	--modulepath build/module-path \
+	-modulepath build/module-path \
 	-d build/classes/monitor.utils \
 	$(find monitor.utils/src/main/java -name '*.java')
 jar9 --create \
@@ -40,7 +40,7 @@ cp build/jars/monitor.utils.jar build/module-path
 echo " > creating monitor.observer"
 javac9 \
 	--class-path 'build/class-path/*' \
-	--modulepath build/module-path \
+	-modulepath build/module-path \
 	-d build/classes/monitor.observer \
 	$(find monitor.observer/src/main/java -name '*.java')
 jar9 --create \
@@ -52,7 +52,7 @@ cp build/jars/monitor.observer.jar build/module-path
 echo " > creating monitor.observer.alpha"
 javac9 \
 	--class-path 'build/class-path/*' \
-	--modulepath build/module-path \
+	-modulepath build/module-path \
 	-d build/classes/monitor.observer.alpha \
 	$(find monitor.observer.alpha/src/main/java -name '*.java')
 jar9 --create \
@@ -64,7 +64,7 @@ cp build/jars/monitor.observer.alpha.jar build/module-path
 echo " > creating monitor.observer.beta"
 javac9 \
 	--class-path 'build/class-path/*' \
-	--modulepath build/module-path \
+	-modulepath build/module-path \
 	-d build/classes/monitor.observer.beta \
 	$(find monitor.observer.beta/src/main/java -name '*.java')
 jar9 --create \
@@ -76,7 +76,7 @@ cp build/jars/monitor.observer.beta.jar build/module-path
 echo " > creating monitor.statistics"
 javac9 \
 	--class-path 'build/class-path/*' \
-	--modulepath build/module-path \
+	-modulepath build/module-path \
 	-d build/classes/monitor.statistics \
 	$(find monitor.statistics/src/main/java -name '*.java')
 jar9 --create \
@@ -88,7 +88,7 @@ cp build/jars/monitor.statistics.jar build/module-path
 echo " > creating monitor.persistence"
 javac9 \
 	--class-path 'build/class-path/*' \
-	--modulepath build/module-path \
+	-modulepath build/module-path \
 	--addmods monitor.statistics \
 	-d build/classes/monitor.persistence \
 	$(find monitor.persistence/src/main/java -name '*.java')
@@ -104,7 +104,7 @@ mv build/class-path/jackson-databind* build/module-path
 echo " > creating monitor.rest"
 javac9 \
 	--class-path 'build/class-path/*' \
-	--modulepath build/module-path \
+	-modulepath build/module-path \
 	--patch-module java.xml.ws.annotation=build/class-path/jsr305-3.0.2.jar \
 	-d build/classes/monitor.rest \
 	$(find monitor.rest/src/main/java -name '*.java')
@@ -117,7 +117,7 @@ cp build/jars/monitor.rest.jar build/module-path
 echo " > creating monitor"
 javac9 \
 	--class-path 'build/class-path/*' \
-	--modulepath build/module-path \
+	-modulepath build/module-path \
 	--addmods monitor.observer.alpha,monitor.observer.beta \
 	--addmods monitor.utils,monitor.statistics \
 	--addmods monitor.rest \

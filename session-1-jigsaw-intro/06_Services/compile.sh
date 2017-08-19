@@ -15,7 +15,7 @@ javac -d $DESTINATION_FOLDER \
 echo ""
 echo "${info} *** Compiling modules in com.greetings - separately *** ${normal}"
 javac -d mods/com.greetings/ \
-      --modulepath mods \
+      -modulepath mods \
       $(find src/com.greetings/ -name "*.java")
 
 echo ""

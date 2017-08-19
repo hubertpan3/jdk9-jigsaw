@@ -19,7 +19,7 @@ runTree "$ORG_ASTRO_FOLDER"
 
 echo ""
 echo "${info} *** Compiling modules in $COM_GREETINGS_FOLDER (fails with an error due to module 'org.astro' not being visible) *** ${normal}"
-javac --modulepath mods \
+javac -modulepath mods \
       -d $COM_GREETINGS_FOLDER \
       src/com.greetings/module-info.java \
       src/com.greetings/com/greetings/Main.java
