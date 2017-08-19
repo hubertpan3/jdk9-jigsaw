@@ -13,11 +13,11 @@ runTree src
 echo ""
 echo "${info} *** Compiling both modules into the '$DESTINATION_FOLDER' folder *** ${normal}"
 javac -d $DESTINATION_FOLDER \
-      --module-source-path src $(find . -name "*.java")
+      -m-source-path src $(find . -name "*.java")
 
 # *************************************************************************************
 #
-# The --module-source-path parameter of javac takes input source files for multiple modules.
+# The -m-source-path parameter of javac takes input source files for multiple modules.
 # In the above both the modules 'org.astro' and 'com.greetings' are compiled at the same time, dependency is fulfilled immediately.
 #
 # *************************************************************************************

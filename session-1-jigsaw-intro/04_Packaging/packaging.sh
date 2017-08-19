@@ -12,7 +12,7 @@ echo ""
 echo "${info} *** Creating module org.astro as a package file (jar) *** ${normal}"
 jar --create \
     --file mlib/org.astro@1.0.jar \
-	--module-version 1.0 \
+	-m-version 1.0 \
 	-C mods/org.astro .
 
 echo ""
