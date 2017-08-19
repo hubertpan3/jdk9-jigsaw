@@ -31,3 +31,9 @@ hs_err_pid*
 
 # Do include library jars
 !**/lib/*.jar
+
+#exclude files generated during exercise execution
+./session-1-jigsaw-intro/01_Greetings/mods
+
+#exclude files generated when run the getJDK.sh file
+jdk-9
