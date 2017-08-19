@@ -34,6 +34,7 @@ hs_err_pid*
 
 #exclude files generated during exercise execution
 ./session-1-jigsaw-intro/01_Greetings/mods
+session-2-jlink/01_JLink/executable/
 
 #exclude files generated when run the getJDK.sh file
 jdk-9
