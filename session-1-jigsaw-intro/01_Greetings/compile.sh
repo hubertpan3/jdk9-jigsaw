@@ -20,7 +20,8 @@ echo "${info} *** Compiling modules in '$COM_GREETINGS_FOLDER' *** ${normal}"
 #
 # The compiler creates the 'mods' folder, if it does not exist already and places compiled modules into them.
 
-javac --module-path mods \
+mkdir -p mods
+javac -modulepath mods \
       -d $COM_GREETINGS_FOLDER \
       src/com.greetings/module-info.java \
       src/com.greetings/com/greetings/Main.java
